@@ -1,6 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
 
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
 body {
     background-color: rgb(38, 43, 90);
     font-family: 'Nova Round', cursive;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10%;
+}
+
+.info {
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+}
+
+.box {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    min-height: 100px;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: rgb(54, 61, 128);
+}
+
+.result {
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#reset {
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-family: 'Nova Round', cursive;
+    display: flex;
+}
+
+#reset:hover {
+    background-color: rgb(219, 2, 2);
 }
