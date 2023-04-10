@@ -1,6 +1,7 @@
 const boxes = document.getElementsByClassName('box')
 const info = document.querySelector('.info')
 const resetBtn = document.getElementById('reset')
+const results = document.querySelector('.result')
 
 let board = ['', '', '', '', '', '', '', '', ''];
 let activePlayer = 'X';
@@ -13,11 +14,12 @@ for (let i = 0; i < boxes.length; i++) {
         }
 
         boxes[i].textContent = activePlayer;
+        boxes[i].classList.add(activePlayer);
         board[i] = activePlayer;
 
         if (checkWin()) {
             gameIsActive = false;
-            info.textContent = `${activePlayer} Won!`;
+            results.textContent = `${activePlayer} Won!`;
             return;
         }
 
@@ -57,5 +59,6 @@ resetBtn.addEventListener('click', () => {
 
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].textContent = '';
+        boxes[i].classList.remove('X', 'O');
     }
 });
