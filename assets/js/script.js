@@ -23,6 +23,12 @@ for (let i = 0; i < boxes.length; i++) {
             return;
         }
 
+        if (checkTie()) {
+            gameIsActive = false;
+            results.textContent = `It's a tie!`;
+            return;
+        }
+
         activePlayer = activePlayer === 'X' ? 'O' : 'X';
         info.textContent = `${activePlayer}'s turn...`;
     });
@@ -43,11 +49,15 @@ function checkWin() {
     for (let i = 0; i < winConditions.length; i++) {
         let [a, b, c] = winConditions[i];
         if (board[a] !== '' && board[a] === board[b] && board[a] === board[c]) {
-            return true;
+            return board[a];
         }
     }
 
-    return false;
+    return null;
+}
+
+function checkTie() {
+    return !board.includes('');
 }
 
 resetBtn.addEventListener('click', () => {
