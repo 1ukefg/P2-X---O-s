@@ -1,14 +1,10 @@
 const boxes = document.getElementsByClassName('box')
-const info = document.getElementsByClassName('info')
+const info = document.querySelector('.info')
 const resetBtn = document.getElementById('reset')
 
 let board = ['', '', '', '', '', '', '', '', ''];
 let activePlayer = 'X';
 let gameIsActive = true;
-
-const X_WON = 'X_WON'
-const O_WON = 'O_WON'
-const DRAW = 'DRAW'
 
 for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener('click', () => {
@@ -44,10 +40,22 @@ function checkWin() {
 
     for (let i = 0; i < winConditions.length; i++) {
         let [a, b, c] = winConditions[i];
-        if (gameBoard[a] !== "" && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
+        if (board[a] !== '' && board[a] === board[b] && board[a] === board[c]) {
             return true;
         }
     }
 
     return false;
 }
+
+resetBtn.addEventListener('click', () => {
+    activePlayer = 'X';
+    gameIsActive = true;
+    board = ['', '', '', '', '', '', '', '', ''];
+    info.textContent = `${activePlayer}'s turn...`;
+    document.querySelector('.result').textContent = '';
+
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].textContent = '';
+    }
+});
