@@ -54,3 +54,26 @@ The game of X & O's demonstrates the powerful use of JavaScript and how it can b
 
 ![Play Again Button](assets/images/Readme/button.png)
 ![Play Again Button On Hover](assets/images/Readme/button-hover.png)
+
+## Future Features
+
+- __A button that shows the game results history__
+- __An animation that draws a line through the game winning cells on the grid when the game is over__
+
+## Testing
+
+- I have tested that the website runs correctly on different browsers such as Chrome, Safari and Firefox.
+- I have confirmed that the website is responsive, maintains a clean structure and functions across all screen sizes. Tested screen sizes include desktops, tablets and modern smartphones. This was achieved by using the developer tools in Google Chrome and through actual use on each of the aforementioned devices.
+- I confirmed that the game itselfs functions correctly and that all possible results are matched with the logical and correct result.
+- I have ensured that the strings that announce which users turn is next display the correct value at each given event.
+- I have asked my partner and family members to play the game on my devices and their own to ensure that there are no bugs and that the site is eady to use and it aesthetically pleasing.
+
+## Fixed Bugs
+
+- Upon applying a style rule to the values that are entered into each cell on the grid, I noticed that after pressing the button to reset the game, all of the cells that where involved in the prebious game where staying as one colour. To fix this, I added a line of code to the for rule of the resetBtn variable in the script.js file to remove 'x' and 'O' from the class list which fixed the issue.
+
+## Validator Testing
+
+- __HTML__
+
+  - No errors where returned when using the W3 validator
