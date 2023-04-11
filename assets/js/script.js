@@ -1,7 +1,7 @@
-const boxes = document.getElementsByClassName('box')
-const info = document.querySelector('.info')
-const resetBtn = document.getElementById('reset')
-const results = document.querySelector('.result')
+const boxes = document.getElementsByClassName('box');
+const info = document.querySelector('.info');
+const resetBtn = document.getElementById('reset');
+const results = document.querySelector('.result');
 
 let board = ['', '', '', '', '', '', '', '', ''];
 let activePlayer = 'X';
